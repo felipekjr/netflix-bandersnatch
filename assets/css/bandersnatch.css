@@ -2,10 +2,10 @@
   Player Skin Designer for Video.js
   http://videojs.com
 
-  To customize the player skin edit 
-  the CSS below. Click "details" 
+  To customize the player skin edit
+  the CSS below. Click "details"
   below to add comments or questions.
-  This file uses some SCSS. Learn more  
+  This file uses some SCSS. Learn more
   at http://sass-lang.com/guide)
 
   This designer can be linked to at:
@@ -13,8 +13,8 @@
 */
 @font-face {
   font-family: nf-icon;
-  src: url(../fonts/nf-icon-v1-86.eot);
-  src: url(../fonts/nf-icon-v1-86.eot?#iefix) format("embedded-opentype"), url(../fonts/nf-icon-v1-86.woff) format("woff"), url(../fonts/nf-icon-v1-86.ttf) format("truetype");
+  src: url(assets/fonts/nf-icon-v1-86.eot);
+  src: url(assets/fonts/nf-icon-v1-86.eot?#iefix) format("embedded-opentype"), url(assets/fonts/nf-icon-v1-86.woff) format("woff"), url(assets/fonts/nf-icon-v1-86.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -32,7 +32,7 @@
    of the button is the center, but there is trend towards moving it to a corner
    where it gets out of the way of valuable content in the poster image.*/
 .vjs-default-skin .vjs-big-play-button {
-  /* The font size is what makes the big play button...big. 
+  /* The font size is what makes the big play button...big.
      All width/height values use ems, which are a multiple of the font size.
      If the .video-js font-size is 10px, then 3em equals 30px.*/
   font-size: 4em;
@@ -264,7 +264,7 @@
   border: none;
 }
 .vjs-loading-spinner:after {
-  background-image: url(../img/site-spinner.png);
+  background-image: url(assets/img/site-spinner.png);
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 50%;

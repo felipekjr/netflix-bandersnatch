@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Expert Week - Netflix Player</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/video-js.css" />
+    <link rel="stylesheet" href="css/bandersnatch.css" />
+  </head>
+  <body>
+    <div id="video-container">
+      <video
+        id="vid"
+        class="video-js vjs-default-skin"
+        poster="img/jsexpert.png"
+        src="assets/videos/video.mp4"
+        controls
+        preload="none"
+      ></video>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/videoPlayer.js"></script>
+    <script src="js/videoComponent.js"></script>
+
+    <script>
+      const MANIFEST_URL = 'manifest.json'
+      const localHost = ["127.0.0.1", 'localhost']
+
+      const isLocal = !!~localHost.indexOf(window.location.hostname)
+      console.log(isLocal)
+      const manifestJSON = await (await (await fetch(MANIFEST_URL)).json())
+      const host = isLocal ? manifestJSON.localHost : manifestJSON.productionHost
+
+      const videoComponent = new VideoComponent()
+      const videoPlayer = new VideoMediaPlayer({manifestJSON})
+
+      videoComponent.initializePlayer()
+      videoPlayer.initializeCodec()
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Netflix Catalog | JS Expert Week</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="js/fontawesome.js"
+            integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9"
+            crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body style="overflow-x: hidden">
+<div class="wrapper">
+    <!-- HEADER -->
+    <header>
+        <div class="netflixLogo">
+            <a id="logo" href="#home"><img src="img/logo.PNG" alt="Logo Image"></a>
+        </div>
+        <nav class="main-nav">
+            <a href="#home">Início</a>
+            <a href="#tvShows">Show de TV</a>
+            <a href="#movies">Filmes</a>
+            <a target="_blank" href="https://codepen.io/cb2307/full/NzaOrm">Portfólio</a>
+        </nav>
+        <nav class="sub-nav">
+            <a href="#"><i class="fas fa-search sub-nav-logo"></i></a>
+            <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a>
+            <a href="#">Sair</a>
+        </nav>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- MAIN CONTAINER -->
+    <section class="main-container">
+        <div class="location" id="home">
+            <h1 id="home">Popular na Netflix</h1>
+            <div class="box">
+                <a role="button" id="video" onclick="visualizarVideo()"><img src="img/jsexpert.png" alt="jsexpert"></a>
+                <a href="#"><img src="img/p2.PNG" alt=""></a>
+                <a href="#"><img src="img/p3.PNG" alt=""></a>
+                <a href="#"><img src="img/p4.PNG" alt=""></a>
+                <a href="#"><img src="img/p5.PNG" alt=""></a>
+                <a href="#"><img src="img/p6.PNG" alt=""></a>
+
+                <a href="#"><img src="img/p7.PNG" alt=""></a>
+                <a href="#"><img src="img/p8.PNG" alt=""></a>
+                <a href="#"><img src="img/p9.PNG" alt=""></a>
+                <a href="#"><img src="img/p10.PNG" alt=""></a>
+                <a href="#"><img src="img/p11.PNG" alt=""></a>
+                <a href="#"><img src="img/p12.PNG" alt=""></a>
+            </div>
+        </div>
+
+
+        <h1 id="tvShows">Shows de TV</h1>
+        <div class="box">
+            <a href="../bandersnatchndex.html"><img src="img/jsexpert.png" alt="jsexpert"></a>
+            <a href="#"><img src="img/tv2.PNG" alt=""></a>
+            <a href="#"><img src="img/tv3.PNG" alt=""></a>
+            <a href="#"><img src="img/tv4.PNG" alt=""></a>
+            <a href="#"><img src="img/tv5.PNG" alt=""></a>
+            <a href="#"><img src="img/tv6.PNG" alt=""></a>
+
+            <a href="#"><img src="img/tv7.PNG" alt=""></a>
+            <a href="#"><img src="img/tv8.PNG" alt=""></a>
+            <a href="#"><img src="img/tv9.PNG" alt=""></a>
+            <a href="#"><img src="img/tv10.PNG" alt=""></a>
+            <a href="#"><img src="img/tv11.PNG" alt=""></a>
+            <a href="#"><img src="img/tv12.PNG" alt=""></a>
+        </div>
+
+
+        <h1 id="movies">Filmes de Ação e Aventura</h1>
+        <div class="box">
+            <a href="#"><img src="img/m1.PNG" alt=""></a>
+            <a href="#"><img src="img/m2.PNG" alt=""></a>
+            <a href="#"><img src="img/m3.PNG" alt=""></a>
+            <a href="#"><img src="img/m4.PNG" alt=""></a>
+            <a href="#"><img src="img/m5.PNG" alt=""></a>
+            <a href="#"><img src="img/m6.PNG" alt=""></a>
+        </div>
+
+        <!-- END OF MAIN CONTAINER -->
+
+        <!-- LINKS -->
+
+        <!-- END OF LINKS -->
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy Felipe Rodrigues
+            </p>
+            <p><a href="https://codepen.io/cb2307/pen/XYxyeY" target="__blank" style="color: var(--dark)">Acesse o
+                    Criador do Layout!</a></p>
+        </footer>
+    </section>
+</div>
+<script>
+    function visualizarVideo() {
+        window.location.href = '/video-player'
+    }
+</script>
+</body>
+
+</html>
