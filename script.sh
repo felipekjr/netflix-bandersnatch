@@ -1,15 +1,17 @@
-ASSETSFOLDER=assets/timeline
+ASSETSFOLDER=assets/videos/timeline
+GENERATEDFOLDER=$ASSETSFOLDER/generated
+mkdir -p $GENERATEDFOLDER
 for mediaFile in `ls $ASSETSFOLDER | grep .mp4`; do
-    # cortas a extensao e resolução do arquivo
+    # corta a extensao e resolução do arquivo
     FILENAME=$(echo $mediaFile | sed -n 's/.mp4//p' | sed -n 's/-1920x1080//p')
     INPUT=$ASSETSFOLDER/$mediaFile
-    FOLDER_TARGET=$ASSETSFOLDER/$FILENAME
+    FOLDER_TARGET=$GENERATEDFOLDER/$FILENAME
     mkdir -p $FOLDER_TARGET
 
     #criar arquivos de resoluções diferentes nas pastas
-    OUTPUT=$ASSETSFOLDER/$FILENAME/$FILENAME
+    OUTPUT=$GENERATEDFOLDER/$FILENAME/$FILENAME
     DURATION=$(ffprobe -i $INPUT -show_format -v quiet | sed -n 's/duration=//p')
-   
+
     OUTPUT720=$OUTPUT-$DURATION-720
     OUTPUT360=$OUTPUT-$DURATION-360
 
@@ -38,5 +40,5 @@ for mediaFile in `ls $ASSETSFOLDER | grep .mp4`; do
         -vf "scale=-1:360" \
         -v quiet \
         $OUTPUT360.mp4
-    
+
 done
