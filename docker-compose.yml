@@ -1,0 +1,12 @@
+version: '3.7'
+
+volumes:
+  store:
+    driver: local
+
+services:
+  ffmpeg:
+    build:
+      .
+    ports:
+      - '8080:8080'

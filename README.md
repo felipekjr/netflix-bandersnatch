@@ -6,6 +6,13 @@
 
 ![titulos](./prints/titulos.png)
 
+## Setup
+docker build -t netflix:latest .
+docker run --name netflix-container -p 8080:80 -t netflix:latest
+
+ou docker-compose up
+
+
 ## Vídeo
 
 ![titulos](./prints/demo.png)

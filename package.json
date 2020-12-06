@@ -2,10 +2,8 @@
   "name": "netflix-bandersnatch",
   "version": "1.0.0",
   "description": "- Acesse o [index](./public/index/index.html) para visualizar a lista de titulos - Acesse o [bandersnatch](./public/bandersnatch/index.html) para acessar o titulo base do projeto",
-  "main": "index.js",
   "scripts": {
-    "assets": "npx http-server --cors -p 8081 assets/videos/",
-    "dev": "npx http-server --cors -p 8080 assets/"
+    "start": "nodemon app.js"
   },
   "nodemonConfig": {
     "ignore": [
