@@ -13,8 +13,8 @@
 */
 @font-face {
   font-family: nf-icon;
-  src: url(assets/fonts/nf-icon-v1-86.eot);
-  src: url(assets/fonts/nf-icon-v1-86.eot?#iefix) format("embedded-opentype"), url(assets/fonts/nf-icon-v1-86.woff) format("woff"), url(assets/fonts/nf-icon-v1-86.ttf) format("truetype");
+  src: url('../fonts/nf-icon-v1-86.eot');
+  src: url('../fonts/nf-icon-v1-86.eot?#iefix') format("embedded-opentype"), url('../fonts/nf-icon-v1-86.woff') format("woff"), url('../fonts/nf-icon-v1-86.ttf') format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -264,7 +264,7 @@
   border: none;
 }
 .vjs-loading-spinner:after {
-  background-image: url(assets/img/site-spinner.png);
+  background-image: url(../img/site-spinner.png);
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 50%;

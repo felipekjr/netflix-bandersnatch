@@ -8,6 +8,7 @@
             integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9"
             crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
     <style>
@@ -49,26 +50,32 @@
 <div class="container">
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-md-5 col-12 login-box p-5">
-            <h2 class="font-weight-bold mb-4">Entrar</h2>
+            <div class="d-flex align-items-center mb-4">
+                <a role="button" class="text-white" href="/login" style="text-decoration: none">
+                    <i class="fa fa-chevron-left fa-2x mr-3" role="button"></i>
+                </a>
+                <h2 class="font-weight-bold" style="margin-bottom: 0">Cadastrar</h2>
+            </div>
+
             <div class="mb-5">
                 <div class="form-group mb-2">
                     <label for="login">Usuário</label>
                     <input type="text" class="form-control" id="login" aria-describedby="emailHelp"
                            placeholder="Digite seu usuário">
                 </div>
-
+                <div class="form-group mb-2">
+                    <label for="login">E-mail</label>
+                    <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
+                           placeholder="Digite seu e-mail">
+                </div>
                 <div class="form-group mb-5">
                     <label for="senha">Senha</label>
                     <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
                 </div>
 
-                <button class="btn btn-danger col-12 p-2" onclick="entrar()">Entrar</button>
+                <button class="btn btn-danger col-12 p-2" onclick="cadastrar()">Cadastrar</button>
             </div>
             <span id="erro"></span>
-            <div class="col-12 d-flex justify-content-center flex-column align-items-center">
-                <h6 class="mb-4" style="text-decoration: underline" role="button">Esqueci minha senha</h6>
-                <h6 role="button">Novo aqui? <strong id="cadastrar-btn" onclick="irParaCadastro()">Cadastre-se</strong></h6>
-            </div>
             <br>
             <br>
             <br>
@@ -76,15 +83,16 @@
     </div>
 </div>
 <script>
-    function entrar() {
+    function cadastrar() {
         const usuario = $('#login').val();
+        const email = $('#email').val()
         const senha = $('#senha').val()
-        if (usuario === null || senha === null || usuario === '' && senha === '') {
-            $("#erro").text("Preencha seu usuário e senha!")
+        if (usuario === null || senha === null || email === null || usuario === '' || senha === '' || email === '') {
+            $("#erro").text("Preencha os dados corretamente!")
         } else {
             // window.location.href = `/login/${usuario}/${senha}`
             var xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("POST", `/login/${usuario}/${senha}`, true);
+            xmlhttp.open("POST", `/cadastro/${usuario}/${senha}/${email}`, true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
             xmlhttp.onreadystatechange = function() {

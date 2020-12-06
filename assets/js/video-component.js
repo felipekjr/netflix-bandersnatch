@@ -1,10 +1,8 @@
 // Responsável por gerenciar o player, abstração ao plugin video.js
-
 class VideoComponent {
     constructor() {
 
     }
-
     initializePlayer() {
         const player = videojs('vid');
         const ModalDialog = videojs.getComponent('ModalDialog');
@@ -14,5 +12,4 @@ class VideoComponent {
         });
 
         player.addChild(modal);
-    }
-}
+    }}

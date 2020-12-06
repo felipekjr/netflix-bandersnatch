@@ -1,7 +1,6 @@
 const loginController = {}
 
 loginController.entrar = function (app, req, res) {
-    console.log(req.body)
     const login = req.params.usuario;
     const senha = req.params.senha;
     const loginModel = new app.src.models.login;

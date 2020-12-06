@@ -1,9 +1,13 @@
 {
   "usuarios": [
     {
-      "id": 1,
       "login": "felipe",
       "senha": "123"
+    },
+    {
+      "login": "fefe",
+      "senha": "123",
+      "email": "12"
     }
   ]
 }

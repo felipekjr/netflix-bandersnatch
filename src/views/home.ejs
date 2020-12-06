@@ -24,12 +24,11 @@
             <a href="#home">Início</a>
             <a href="#tvShows">Show de TV</a>
             <a href="#movies">Filmes</a>
-            <a target="_blank" href="https://codepen.io/cb2307/full/NzaOrm">Portfólio</a>
         </nav>
         <nav class="sub-nav">
             <a href="#"><i class="fas fa-search sub-nav-logo"></i></a>
             <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a>
-            <a href="#">Sair</a>
+            <a role="button" onclick="sair()" class="font-weight-bold">Sair</a>
         </nav>
     </header>
     <!-- END OF HEADER -->
@@ -102,6 +101,10 @@
 <script>
     function visualizarVideo() {
         window.location.href = '/video-player'
+    }
+    function sair() {
+        localStorage.clear()
+        window.location.href = '/login'
     }
 </script>
 </body>
