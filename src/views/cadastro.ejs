@@ -99,7 +99,7 @@
                 if (this.status == 200) {
                     $('#erro').text("")
                     localStorage.setItem('usuarioLogado', usuario)
-                    window.location.href = '/home';
+                    window.location.href = '/login';
                 }
                 else $("#erro").text("Usuário ou senha inválidos.")
             };
